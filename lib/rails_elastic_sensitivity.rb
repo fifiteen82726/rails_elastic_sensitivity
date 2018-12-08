@@ -3,7 +3,6 @@ require 'active_record'
 
 class ElaticSensitivity
   attr_accessor :main_t, :elastic_sensitivity, :epi, :k, :c, :k_square, :cache_mfx_table
-  alias_method :mfx, :precompute_mfx
 
   def initialize(table)
     @cache_mfx_table = {}
