@@ -22,7 +22,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Example:
+
+```rb
+# Create Instance
+es = ElaticSensitivity.new(:user)
+
+# See true query result
+es.joins(:gamecharacters).where(gamecharacters: {course_id: 100}).count
+
+# See query result with elastic sensitivity mechanism
+es.joins(:gamecharacters).where(gamecharacters: {course_id: 100}).elastic_count
+```
 
 ## Development
 
