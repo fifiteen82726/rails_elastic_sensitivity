@@ -3,6 +3,7 @@ require 'active_record'
 
 class ElaticSensitivity
   attr_accessor :main_t, :elastic_sensitivity, :epi, :k, :c, :k_square, :cache_mfx_table
+  alias_method :mfx, :precompute_mfx
 
   def initialize(table)
     @cache_mfx_table = {}
@@ -66,14 +67,6 @@ class ElaticSensitivity
 
     Rails.cache.write('now_es', self)
     @main_t.joins(joins_t)
-  end
-
-  def mfx(attribute, table)
-
-  end
-
-  def compute_elastic_sensitivity(c, k, k_square)
-
   end
 
   def compute_constant(precompute_params)
