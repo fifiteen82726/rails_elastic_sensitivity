@@ -14,7 +14,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 # Lastest Version
-gem 'rails_elastic_sensitivity', '~> 0.1.1'
+gem 'rails_elastic_sensitivity'
 ```
 
 And then execute:
